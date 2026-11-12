@@ -1,0 +1,38 @@
+name: seinfra_demanda_metro_bh
+owner_org: secretaria-de-estado-de-infraestrutura-e-mobilidade-de-minas-gerais-seinfra
+profile: data-package
+resources:
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: metro_2026_10
+    path: data/metro_2026_10.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: id_transacao
+          type: integer
+        - name: data_hora
+          type: datetime
+        - name: id_estacao
+          type: integer
+        - name: id_bloqueio
+          type: integer
+        - name: grupo_bilhetagem
+          type: string
+        - name: forma_pagamento
+          type: string
+        - name: tipo_bilhetagem
+          type: string
+        - name: valor
+          type: any
+        - name: id_validador
+          type: any
+        - name: usuario
+          type: any
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+title: Seinfra_demanda_metro_bh
