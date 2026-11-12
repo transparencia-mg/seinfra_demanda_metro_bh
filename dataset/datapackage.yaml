@@ -39,6 +39,42 @@ resources:
     scheme: file
     title: Demanda bilhetagem Metro BH 01/2026
   - description: 'Demanda de bilhetagem do Metrô de Belo Horizonte: transações da
+      3ª semana completa de 02/2026, de domingo 15/02/2026 a sábado 21/02/2026 (454.215
+      transações). A coluna usuario é pseudonimizada (HMAC-SHA256, LGPD): o mesmo
+      usuário tem o mesmo código em todos os meses. Gerado em 12/11/2026.'
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: metro_2026_02
+    path: data/metro_2026_02.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: id_transacao
+          type: integer
+        - name: data_hora
+          type: datetime
+        - name: id_estacao
+          type: integer
+        - name: id_bloqueio
+          type: integer
+        - name: grupo_bilhetagem
+          type: string
+        - name: forma_pagamento
+          type: string
+        - name: tipo_bilhetagem
+          type: string
+        - name: valor
+          type: any
+        - name: id_validador
+          type: any
+        - name: usuario
+          type: any
+    scheme: file
+    title: Demanda bilhetagem Metro BH 02/2026
+  - description: 'Demanda de bilhetagem do Metrô de Belo Horizonte: transações da
       3ª semana completa de 10/2026, de domingo 18/10/2026 a sábado 24/10/2026 (509.311
       transações). A coluna usuario é pseudonimizada (HMAC-SHA256, LGPD): o mesmo
       usuário tem o mesmo código em todos os meses. Gerado em 12/11/2026.'
