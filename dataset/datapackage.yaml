@@ -2,7 +2,10 @@ name: seinfra_demanda_metro_bh
 owner_org: secretaria-de-estado-de-infraestrutura-e-mobilidade-de-minas-gerais-seinfra
 profile: data-package
 resources:
-  - description: Insira a descrição/explicação detalhada deste recurso.
+  - description: 'Demanda de bilhetagem do Metrô de Belo Horizonte: transações da
+      3ª semana completa de 10/2026, de domingo 18/10/2026 a sábado 24/10/2026 (509.311
+      transações). A coluna usuario é pseudonimizada (HMAC-SHA256, LGPD): o mesmo
+      usuário tem o mesmo código em todos os meses. Gerado em 12/11/2026.'
     dialect:
       delimiter: ;
     encoding: utf-8-sig
@@ -34,5 +37,5 @@ resources:
         - name: usuario
           type: any
     scheme: file
-    title: Insira um título humanamente legível para este recurso.
+    title: Demanda bilhetagem Metro BH 10/2026
 title: Seinfra_demanda_metro_bh
