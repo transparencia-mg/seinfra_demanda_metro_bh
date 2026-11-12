@@ -3,6 +3,10 @@
 Documentação das principais alterações deste repositório.
 Baseado na filosofia [Mantenha um Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+### [1.3.1] - 2026-11-12
+
+- Atualizado o recurso `metro_2026_02` (Demanda bilhetagem Metro BH 02/2026): 3ª semana de 15/02/2026 a 21/02/2026, 454.215 transações.
+
 ### [1.3.0] - 2026-11-12
 
 - Incluído o recurso `metro_2026_02` (Demanda bilhetagem Metro BH 02/2026): 3ª semana de 15/02/2026 a 21/02/2026, 454.215 transações.
