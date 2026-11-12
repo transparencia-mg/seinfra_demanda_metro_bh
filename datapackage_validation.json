@@ -1,11 +1,11 @@
 {
   "version": "4.16.6",
-  "time": 10.842,
+  "time": 10.613,
   "errors": [],
   "tasks": [
     {
       "resource": {
-        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "description": "Demanda de bilhetagem do Metrô de Belo Horizonte: transações da 3ª semana completa de 10/2026, de domingo 18/10/2026 a sábado 24/10/2026 (509.311 transações). A coluna usuario é pseudonimizada (HMAC-SHA256, LGPD): o mesmo usuário tem o mesmo código em todos os meses. Gerado em 12/11/2026.",
         "dialect": {
           "delimiter": ";"
         },
@@ -60,7 +60,7 @@
           ]
         },
         "scheme": "file",
-        "title": "Insira um título humanamente legível para este recurso.",
+        "title": "Demanda bilhetagem Metro BH 10/2026",
         "stats": {
           "hash": "3324fe08d0775e9ad33be7c61c92f425",
           "bytes": 41790553,
@@ -68,7 +68,7 @@
           "rows": 509311
         }
       },
-      "time": 10.832,
+      "time": 10.603,
       "scope": [
         "hash-count-error",
         "byte-count-error",
