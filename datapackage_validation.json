@@ -1,6 +1,6 @@
 {
   "version": "4.16.6",
-  "time": 41.016,
+  "time": 37.441,
   "errors": [],
   "tasks": [
     {
@@ -68,7 +68,7 @@
           "rows": 388864
         }
       },
-      "time": 11.323,
+      "time": 7.758,
       "scope": [
         "hash-count-error",
         "byte-count-error",
@@ -161,7 +161,100 @@
           "rows": 454215
         }
       },
-      "time": 13.339,
+      "time": 9.174,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [],
+      "stats": {
+        "errors": 0
+      },
+      "valid": true
+    },
+    {
+      "resource": {
+        "description": "Demanda de bilhetagem do Metrô de Belo Horizonte: transações da 3ª semana completa de 03/2026, de domingo 15/03/2026 a sábado 21/03/2026 (477.923 transações). A coluna usuario é pseudonimizada (HMAC-SHA256, LGPD): o mesmo usuário tem o mesmo código em todos os meses. Gerado em 24/11/2026.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "metro_2026_03",
+        "path": "data/metro_2026_03.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "id_transacao",
+              "type": "integer"
+            },
+            {
+              "name": "data_hora",
+              "type": "datetime"
+            },
+            {
+              "name": "id_estacao",
+              "type": "integer"
+            },
+            {
+              "name": "id_bloqueio",
+              "type": "integer"
+            },
+            {
+              "name": "grupo_bilhetagem",
+              "type": "string"
+            },
+            {
+              "name": "forma_pagamento",
+              "type": "string"
+            },
+            {
+              "name": "tipo_bilhetagem",
+              "type": "string"
+            },
+            {
+              "name": "valor",
+              "type": "any"
+            },
+            {
+              "name": "id_validador",
+              "type": "any"
+            },
+            {
+              "name": "usuario",
+              "type": "any"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Demanda bilhetagem Metro BH 03/2026",
+        "stats": {
+          "hash": "065c5a9832f2d84b40996010b0da5aa3",
+          "bytes": 38360791,
+          "fields": 10,
+          "rows": 477923
+        }
+      },
+      "time": 9.623,
       "scope": [
         "hash-count-error",
         "byte-count-error",
@@ -254,7 +347,7 @@
           "rows": 509311
         }
       },
-      "time": 16.317,
+      "time": 10.855,
       "scope": [
         "hash-count-error",
         "byte-count-error",
@@ -285,7 +378,7 @@
   ],
   "stats": {
     "errors": 0,
-    "tasks": 3
+    "tasks": 4
   },
   "valid": true
 }
