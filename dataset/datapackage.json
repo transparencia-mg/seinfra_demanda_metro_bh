@@ -352,6 +352,180 @@
       "title": "Demanda bilhetagem Metro BH 06/2026"
     },
     {
+      "description": "Demanda de bilhetagem do Metrô de Belo Horizonte: transações da 3ª semana completa de 07/2026, de domingo 19/07/2026 a sábado 25/07/2026 (437.726 transações). A coluna usuario é pseudonimizada (HMAC-SHA256, LGPD): o mesmo usuário tem o mesmo código em todos os meses. Gerado em 24/11/2026.",
+      "dialect": {
+        "delimiter": ";"
+      },
+      "encoding": "utf-8-sig",
+      "format": "csv",
+      "hashing": "md5",
+      "name": "metro_2026_07",
+      "path": "data/metro_2026_07.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "id_transacao",
+            "type": "integer"
+          },
+          {
+            "name": "data_hora",
+            "type": "datetime"
+          },
+          {
+            "name": "id_estacao",
+            "type": "integer"
+          },
+          {
+            "name": "id_bloqueio",
+            "type": "integer"
+          },
+          {
+            "name": "grupo_bilhetagem",
+            "type": "string"
+          },
+          {
+            "name": "forma_pagamento",
+            "type": "string"
+          },
+          {
+            "name": "tipo_bilhetagem",
+            "type": "string"
+          },
+          {
+            "name": "valor",
+            "type": "any"
+          },
+          {
+            "name": "id_validador",
+            "type": "any"
+          },
+          {
+            "name": "usuario",
+            "type": "any"
+          }
+        ]
+      },
+      "scheme": "file",
+      "title": "Demanda bilhetagem Metro BH 07/2026"
+    },
+    {
+      "description": "Demanda de bilhetagem do Metrô de Belo Horizonte: transações da 3ª semana completa de 08/2026, de domingo 16/08/2026 a sábado 22/08/2026 (492.008 transações). A coluna usuario é pseudonimizada (HMAC-SHA256, LGPD): o mesmo usuário tem o mesmo código em todos os meses. Gerado em 24/11/2026.",
+      "dialect": {
+        "delimiter": ";"
+      },
+      "encoding": "utf-8-sig",
+      "format": "csv",
+      "hashing": "md5",
+      "name": "metro_2026_08",
+      "path": "data/metro_2026_08.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "id_transacao",
+            "type": "integer"
+          },
+          {
+            "name": "data_hora",
+            "type": "datetime"
+          },
+          {
+            "name": "id_estacao",
+            "type": "integer"
+          },
+          {
+            "name": "id_bloqueio",
+            "type": "integer"
+          },
+          {
+            "name": "grupo_bilhetagem",
+            "type": "string"
+          },
+          {
+            "name": "forma_pagamento",
+            "type": "string"
+          },
+          {
+            "name": "tipo_bilhetagem",
+            "type": "string"
+          },
+          {
+            "name": "valor",
+            "type": "any"
+          },
+          {
+            "name": "id_validador",
+            "type": "any"
+          },
+          {
+            "name": "usuario",
+            "type": "any"
+          }
+        ]
+      },
+      "scheme": "file",
+      "title": "Demanda bilhetagem Metro BH 08/2026"
+    },
+    {
+      "description": "Demanda de bilhetagem do Metrô de Belo Horizonte: transações da 3ª semana completa de 09/2026, de domingo 20/09/2026 a sábado 26/09/2026 (481.393 transações). A coluna usuario é pseudonimizada (HMAC-SHA256, LGPD): o mesmo usuário tem o mesmo código em todos os meses. Gerado em 24/11/2026.",
+      "dialect": {
+        "delimiter": ";"
+      },
+      "encoding": "utf-8-sig",
+      "format": "csv",
+      "hashing": "md5",
+      "name": "metro_2026_09",
+      "path": "data/metro_2026_09.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "id_transacao",
+            "type": "integer"
+          },
+          {
+            "name": "data_hora",
+            "type": "datetime"
+          },
+          {
+            "name": "id_estacao",
+            "type": "integer"
+          },
+          {
+            "name": "id_bloqueio",
+            "type": "integer"
+          },
+          {
+            "name": "grupo_bilhetagem",
+            "type": "string"
+          },
+          {
+            "name": "forma_pagamento",
+            "type": "string"
+          },
+          {
+            "name": "tipo_bilhetagem",
+            "type": "string"
+          },
+          {
+            "name": "valor",
+            "type": "any"
+          },
+          {
+            "name": "id_validador",
+            "type": "any"
+          },
+          {
+            "name": "usuario",
+            "type": "any"
+          }
+        ]
+      },
+      "scheme": "file",
+      "title": "Demanda bilhetagem Metro BH 09/2026"
+    },
+    {
       "description": "Demanda de bilhetagem do Metrô de Belo Horizonte: transações da 3ª semana completa de 10/2026, de domingo 18/10/2026 a sábado 24/10/2026 (509.311 transações). A coluna usuario é pseudonimizada (HMAC-SHA256, LGPD): o mesmo usuário tem o mesmo código em todos os meses. Gerado em 12/11/2026.",
       "dialect": {
         "delimiter": ";"
