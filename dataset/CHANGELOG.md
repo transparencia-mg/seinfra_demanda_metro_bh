@@ -1,3 +1,17 @@
+Este conjunto de dados apresenta a demanda de passageiros do Metrô de Belo Horizonte, sob gestão da Secretaria de Estado de Infraestrutura, Mobilidade e Parcerias (SEINFRA/MG).
+
+Os dados são consolidados a partir das transações registradas no sistema de bilhetagem do Metrô BH. Cada mês de referência traz todas as transações de uma semana completa, a 3ª semana do mês, de domingo a sábado. Para cada transação são informados a data e a hora, a estação e o bloqueio em que ocorreu, o grupo de bilhetagem, a forma de pagamento, o tipo de bilhetagem e, quando registrado, o valor pago.
+
+Arquivos: um recurso por mês de referência, com o nome metro_AAAA_MM (CSV, separador ponto e vírgula, UTF-8, decimal com vírgula). Granularidade: uma linha por transação. Atualização mensal.
+
+Dicionário de dados
+
+id_transacao – integer: identificador da transação no sistema de bilhetagem. data_hora – datetime (AAAA-MM-DD HH:MM:SS.mmm): data e hora da transação. id_estacao – integer: código da estação em que ocorreu a transação. id_bloqueio – integer: código do bloqueio (catraca) em que ocorreu a transação. grupo_bilhetagem – string: grupo da bilhetagem. Valores: Exclusivos, Integrados, Gratuidades. forma_pagamento – string: meio usado na transação. Valores: VALIDADOR EXTERNO, QRCODE, CARTAO SERVICO, CARTAO BANCARIO. tipo_bilhetagem – string: tipo da bilhetagem. Ex.: Transfacil, Otimo, Bilheteria, Passe Livre, Credito, Debito, App Bipay, Operacional. valor – number: valor pago na transação, em reais. Preenchido apenas quando registrado pelo sistema (pagamentos por QR Code e cartão bancário); vazio nas demais formas de pagamento. id_validador – string: identificador do validador, quando informado pelo sistema de bilhetagem. usuario – string: código pseudonimizado do usuário, preenchido apenas quando a forma de pagamento identifica o usuário. Ex.: f942de2fb6952a48.
+
+Observações
+
+Cada mês traz apenas a 3ª semana completa do mês (de domingo a sábado), e não o mês inteiro. O período exato e o total de transações de cada arquivo estão na descrição do recurso. A coluna usuario é pseudonimizada (HMAC-SHA256), em atendimento à Lei Geral de Proteção de Dados (LGPD). O mesmo usuário recebe o mesmo código em todos os meses, o que permite acompanhar padrões de uso sem identificar a pessoa. As alterações e reprocessamentos de cada publicação estão registrados no histórico de alterações abaixo.
+
 # CHANGELOG - Controle de alterações
 
 Documentação das principais alterações deste repositório.
