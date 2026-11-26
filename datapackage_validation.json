@@ -1,6 +1,6 @@
 {
   "version": "4.16.6",
-  "time": 125.21,
+  "time": 65.428,
   "errors": [],
   "tasks": [
     {
@@ -68,7 +68,7 @@
           "rows": 388864
         }
       },
-      "time": 10.474,
+      "time": 5.647,
       "scope": [
         "hash-count-error",
         "byte-count-error",
@@ -161,7 +161,7 @@
           "rows": 454215
         }
       },
-      "time": 12.163,
+      "time": 6.384,
       "scope": [
         "hash-count-error",
         "byte-count-error",
@@ -254,7 +254,7 @@
           "rows": 477923
         }
       },
-      "time": 12.848,
+      "time": 6.72,
       "scope": [
         "hash-count-error",
         "byte-count-error",
@@ -347,7 +347,7 @@
           "rows": 400542
         }
       },
-      "time": 10.746,
+      "time": 5.703,
       "scope": [
         "hash-count-error",
         "byte-count-error",
@@ -440,7 +440,7 @@
           "rows": 498512
         }
       },
-      "time": 13.404,
+      "time": 6.98,
       "scope": [
         "hash-count-error",
         "byte-count-error",
@@ -533,7 +533,7 @@
           "rows": 470482
         }
       },
-      "time": 12.634,
+      "time": 6.606,
       "scope": [
         "hash-count-error",
         "byte-count-error",
@@ -563,7 +563,7 @@
     },
     {
       "resource": {
-        "description": "Demanda de bilhetagem do Metrô de Belo Horizonte: transações da 3ª semana completa de 07/2026, de domingo 19/07/2026 a sábado 25/07/2026 (437.726 transações). A coluna usuario é pseudonimizada (HMAC-SHA256, LGPD): o mesmo usuário tem o mesmo código em todos os meses. Gerado em 24/11/2026.",
+        "description": "Demanda de bilhetagem do Metrô de Belo Horizonte: transações da 3ª semana completa de 07/2026, de domingo 19/07/2026 a sábado 25/07/2026 (437.726 transações). A coluna usuario é pseudonimizada (HMAC-SHA256, LGPD): o mesmo usuário tem o mesmo código em todos os meses. Gerado em 26/11/2026.",
         "dialect": {
           "delimiter": ";"
         },
@@ -626,7 +626,7 @@
           "rows": 437726
         }
       },
-      "time": 11.825,
+      "time": 6.118,
       "scope": [
         "hash-count-error",
         "byte-count-error",
@@ -719,7 +719,7 @@
           "rows": 492008
         }
       },
-      "time": 13.185,
+      "time": 6.947,
       "scope": [
         "hash-count-error",
         "byte-count-error",
@@ -812,7 +812,7 @@
           "rows": 481393
         }
       },
-      "time": 12.766,
+      "time": 6.768,
       "scope": [
         "hash-count-error",
         "byte-count-error",
@@ -905,7 +905,7 @@
           "rows": 509311
         }
       },
-      "time": 15.057,
+      "time": 7.484,
       "scope": [
         "hash-count-error",
         "byte-count-error",
