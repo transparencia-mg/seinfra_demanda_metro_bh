@@ -1,6 +1,8 @@
 name: CKAN
 
 on:
+  # Rodar à mão (aba Actions > CKAN > Run workflow), com o código atual da main
+  workflow_dispatch:
   push:
     paths:
       - 'dataset/**'
