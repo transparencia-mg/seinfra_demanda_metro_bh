@@ -4,5 +4,6 @@ yaml = { cmd = "python scripts/create_datapackage_yaml.py", help = "Cria datapac
 json = { cmd = "python scripts/create_datapackage_json.py", help = "Converte datapackage.yaml em datapackage.json." }
 documentation = { cmd = "python scripts/generate_documentation.py", help = "Gera documentação markdown dinâmica." }
 sync = { cmd = "python scripts/ckan_sync_resources.py --datapackage dataset/datapackage.json", help = "Cria no CKAN recursos novos e exclui os que saíram do datapackage." }
+update = { cmd = "python scripts/ckan_update_changed.py --datapackage dataset/datapackage.json", help = "Atualiza no CKAN só os recursos que mudaram (MD5) e os metadados do dataset." }
 validate = { cmd = "python scripts/validate.py", help = "Valida dataset." }
 report = { cmd = "livemark build index.md --target index.html", help = "Gera relatório de validação." }

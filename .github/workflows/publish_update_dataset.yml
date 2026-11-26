@@ -6,6 +6,12 @@ on:
       - 'dataset/**'
       - 'upload/**'
 
+# Uma execução por vez: dois pushes seguidos rodavam em paralelo e o segundo falhava no push
+# dos commits automáticos (24/11/2026). A nova espera a anterior terminar.
+concurrency:
+  group: publish-dataset
+  cancel-in-progress: false
+
 jobs:
   publish_update:
     runs-on: ubuntu-22.04
@@ -83,9 +89,13 @@ jobs:
           CKAN_HOST: ${{ secrets.CKAN_HOST }}
           CKAN_KEY: ${{ secrets[format('CKAN_KEY_{0}', steps.string.outputs.uppercase)] }}
         run: task sync
-      - name: Update dataset in CKAN with dpckan with exist
+      # Só os recursos que mudaram (scripts/ckan_update_changed.py). O `dpckan dataset update`
+      # reenviava todos (o dataset não tem licença aberta): 4 h para mudar uma linha (26/11/2026).
+      # Um mês novo leva ~25 min no CKAN; o limite evita ficar preso até as 6 h da Action.
+      - name: Update dataset in CKAN (só o que mudou)
         if: ${{ ! cancelled() }}
+        timeout-minutes: 120
         env:
           CKAN_HOST: ${{ secrets.CKAN_HOST }}
           CKAN_KEY: ${{ secrets[format('CKAN_KEY_{0}', steps.string.outputs.uppercase)] }}
-        run: dpckan --datastore --datapackage dataset/datapackage.json --ckan-host "$CKAN_HOST" --ckan-key "$CKAN_KEY" dataset update
+        run: task update
