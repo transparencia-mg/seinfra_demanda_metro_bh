@@ -12,8 +12,10 @@ O que faz:
   - arquivo do recurso: compara o MD5 local com o campo `hash` do recurso no
     CKAN (gravado por este script a cada envio). Só reenvia o arquivo (e recria a
     estrutura do datastore) quando o MD5 mudou. Recurso ainda sem `hash` (enviado
-    pelo dpckan): baixa o arquivo do CKAN uma vez para comparar; se for igual, só
-    grava o `hash`, sem reenviar;
+    pelo dpckan): baixa o arquivo do CKAN uma vez para comparar (com a chave: o
+    dataset não é aberto e o download sem ela dá 404). Se nem assim baixar, compara
+    o tamanho em bytes (campo `size` do CKAN). Se for igual, só grava o `hash`,
+    sem reenviar;
   - nome/descrição do recurso mudaram, mas o arquivo não: só resource_patch;
   - no fim, sempre: datapackage.json remoto e metadados do dataset (README,
     CHANGELOG, título...), uma vez só.
@@ -29,7 +31,8 @@ import hashlib
 import os
 import sys
 import time
-from urllib.request import urlopen
+from urllib.error import URLError
+from urllib.request import Request, urlopen
 
 from ckanapi import RemoteCKAN
 from dpckan.functions import (
@@ -53,9 +56,9 @@ def md5_arquivo(caminho):
     return h.hexdigest()
 
 
-def md5_url(url):
+def md5_url(url, key):
     h = hashlib.md5()
-    with urlopen(url, timeout=300) as resp:
+    with urlopen(Request(url, headers={"Authorization": key}), timeout=300) as resp:
         for bloco in iter(lambda: resp.read(1 << 20), b""):
             h.update(bloco)
     return h.hexdigest()
@@ -100,7 +103,14 @@ def main():
         if not md5_remoto:
             # enviado pelo dpckan, sem hash: compara baixando o arquivo uma vez
             print(f"{nome}: sem hash no CKAN; baixando para comparar...")
-            md5_remoto = md5_url(remoto["url"])
+            try:
+                md5_remoto = md5_url(remoto["url"], key)
+            except (URLError, OSError) as e:
+                tamanho_local = os.path.getsize(caminho)
+                tamanho_remoto = int(remoto.get("size") or -1)
+                print(f"{nome}: download falhou ({e}); comparando o tamanho: "
+                      f"local {tamanho_local} bytes, CKAN {tamanho_remoto} bytes.")
+                md5_remoto = md5_local if tamanho_remoto == tamanho_local else "desconhecido"
             if md5_remoto == md5_local and not args.simular:
                 ckan.call_action("resource_patch", {"id": resource_id, "hash": md5_local})
 
